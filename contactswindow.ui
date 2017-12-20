@@ -17,7 +17,7 @@
    <iconset>
     <normaloff>../../../../usr/local/share/ksms/icon.png</normaloff>../../../../usr/local/share/ksms/icon.png</iconset>
   </property>
-  <widget class="QListView" name="ContactsList">
+  <widget class="QTableView" name="ContactsList">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -26,6 +26,36 @@
      <height>451</height>
     </rect>
    </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="autoScroll">
+    <bool>true</bool>
+   </property>
+   <property name="tabKeyNavigation">
+    <bool>false</bool>
+   </property>
+   <property name="showGrid">
+    <bool>false</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+   <property name="cornerButtonEnabled">
+    <bool>false</bool>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderHighlightSections">
+    <bool>false</bool>
+   </attribute>
   </widget>
   <widget class="QPushButton" name="addContactButton">
    <property name="geometry">
@@ -53,33 +83,27 @@
     <string>Okay</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="nameTextEdit">
+  <widget class="QLineEdit" name="nameTextEdit">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>470</y>
-     <width>131</width>
-     <height>31</height>
+     <width>141</width>
+     <height>32</height>
     </rect>
-   </property>
-   <property name="inputMethodHints">
-    <set>Qt::ImhLatinOnly</set>
    </property>
    <property name="placeholderText">
     <string>Name</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="numberTextEdit">
+  <widget class="QLineEdit" name="numberTextEdit">
    <property name="geometry">
     <rect>
      <x>160</x>
      <y>470</y>
-     <width>131</width>
-     <height>31</height>
+     <width>141</width>
+     <height>32</height>
     </rect>
-   </property>
-   <property name="inputMethodHints">
-    <set>Qt::ImhDigitsOnly</set>
    </property>
    <property name="placeholderText">
     <string>Number</string>

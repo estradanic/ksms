@@ -1,0 +1,65 @@
+[DEBREATE-0.7.13]
+<<CTRL>>
+Package: ksms
+Version: 1.0
+Maintainer: Nicholas Estrada <116nic97@gmail.com>
+Section: mail
+Homepage: https://github.com/estradanic/ksms
+Architecture: amd64
+Priority: optional
+Depends: kdeconnect, libc6, qt5-default (>=5.6.0)
+Description: simple sms frontend for kdeconnect
+
+<</CTRL>>
+<<FILES>>
+1
+/home/nic/Desktop/build-ksms-Desktop-Release/ksms* -> ksms -> /usr/bin
+/home/nic/Pictures/Icons/icon.png -> icon.png -> /usr/local/share/ksms
+<</FILES>>
+<<SCRIPTS>>
+<<PREINST>>
+0
+<</PREINST>>
+<<POSTINST>>
+0
+<</POSTINST>>
+<<PRERM>>
+0
+<</PRERM>>
+<<POSTRM>>
+0
+<</POSTRM>>
+<</SCRIPTS>>
+<<CHANGELOG>>
+<<DEST>>DEFAULT<</DEST>>
+ksms (1.0) xenial; urgency=low
+
+  * Fixed Icon, finalized directories
+
+ -- Nicholas Estrada <116nic97@gmail.com>  Tue, 19 Dec 2017 11:46:38 -0800
+
+<</CHANGELOG>>
+<<COPYRIGHT>>
+Copyright © 2017 <copyright holder(s)> [<email>]
+
+/usr/share/common-licenses/GPL-3
+<</COPYRIGHT>>
+<<MENU>>
+1
+Name=ksms
+Version=1.0
+Exec=/usr/bin/ksms
+Comment=a simple sms rontend for kdeconnect
+Icon=/usr/local/share/ksms/icon.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Utilities;Utility;Tools;
+<</MENU>>
+<<BUILD>>
+1
+1
+1
+strip
+<</BUILD>>

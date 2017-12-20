@@ -94,10 +94,6 @@ void MainWindow::on_destinationButton_clicked(){
     cw->show();
 }
 
-void MainWindow::contactsWindowHandle(QString contact){
-
-}
-
 void MainWindow::on_message_textChanged(){
     if(ui->message->toPlainText().isEmpty()){
         ui->sendButton->setText("Please enter a message");

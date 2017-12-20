@@ -23,6 +23,10 @@ private slots:
     void on_addContactButton_clicked();
     void on_ContactsList_doubleClicked();
     void on_okayButton_clicked();
+    void removeContact();
+    void editContact();
+    void on_ContactsList_customContextMenuRequested(const QPoint &pos);
+    void onOkayButtonClickedEdit();
 
 private:
     Ui::ContactsWindow *ui;
