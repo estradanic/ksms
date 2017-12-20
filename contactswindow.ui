@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ContactsWindow</class>
+ <widget class="QDialog" name="ContactsWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>511</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Contacts</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../usr/local/share/ksms/icon.png</normaloff>../../../../usr/local/share/ksms/icon.png</iconset>
+  </property>
+  <widget class="QListView" name="ContactsList">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>381</width>
+     <height>451</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addContactButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>470</y>
+     <width>381</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add Contact</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="okayButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>470</y>
+     <width>81</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Okay</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="nameTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>470</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhLatinOnly</set>
+   </property>
+   <property name="placeholderText">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="numberTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>470</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="placeholderText">
+    <string>Number</string>
+   </property>
+  </widget>
+  <zorder>ContactsList</zorder>
+  <zorder>okayButton</zorder>
+  <zorder>nameTextEdit</zorder>
+  <zorder>numberTextEdit</zorder>
+  <zorder>addContactButton</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
