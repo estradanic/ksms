@@ -91,7 +91,7 @@ QComboBox* MainWindow::getDestinationSelect(){
 void MainWindow::on_destinationButton_clicked(){
     ContactsWindow* cw = new ContactsWindow();
     cw->setListener(this);
-    cw->show();
+    cw->exec();
 }
 
 void MainWindow::on_message_textChanged(){

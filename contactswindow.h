@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QStandardItem>
 #include "mainwindow.h"
+#include <QMenu>
 
 namespace Ui {
 class ContactsWindow;
@@ -33,8 +34,10 @@ private:
     MainWindow *listener;
     QStringList names;
     QStringList numbers;
+    QMenu* menu;
     void getContacts();
     void showContacts();
+    QStandardItemModel* contactListModel;
 };
 
 

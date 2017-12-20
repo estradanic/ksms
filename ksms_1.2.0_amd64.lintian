@@ -1,0 +1,24 @@
+E: ksms: control-file-has-bad-permissions md5sums 0664 != 0644
+E: ksms: extended-description-is-empty
+E: ksms: depends-on-metapackage depends: qt5-default (>=5.9)
+W: ksms: non-standard-dir-perm usr/ 0775 != 0755
+W: ksms: non-standard-dir-perm usr/bin/ 0775 != 0755
+W: ksms: non-standard-dir-perm usr/local/ 0775 != 0755
+E: ksms: dir-in-usr-local usr/local/share/
+W: ksms: non-standard-dir-perm usr/local/share/ 0775 != 0755
+E: ksms: dir-in-usr-local usr/local/share/ksms/
+W: ksms: non-standard-dir-perm usr/local/share/ksms/ 0775 != 0755
+E: ksms: file-in-usr-local usr/local/share/ksms/icon.png
+W: ksms: file-in-unusual-dir usr/local/share/ksms/icon.png
+W: ksms: non-standard-dir-perm usr/share/ 0775 != 0755
+W: ksms: non-standard-dir-perm usr/share/applications/ 0775 != 0755
+W: ksms: non-standard-file-perm usr/share/applications/ksms.desktop 0664 != 0644
+W: ksms: non-standard-dir-perm usr/share/doc/ 0775 != 0755
+W: ksms: non-standard-dir-perm usr/share/doc/ksms/ 0775 != 0755
+W: ksms: non-standard-file-perm usr/share/doc/ksms/changelog.gz 0664 != 0644
+W: ksms: non-standard-file-perm usr/share/doc/ksms/copyright 0664 != 0644
+W: ksms: binary-without-manpage usr/bin/ksms
+E: ksms: md5sums-lists-nonexistent-file usr/bin/ksm
+W: ksms: file-missing-in-md5sums usr/bin/ksms
+W: ksms: desktop-entry-invalid-category Utilities usr/share/applications/ksms.desktop
+W: ksms: desktop-entry-invalid-category Tools usr/share/applications/ksms.desktop

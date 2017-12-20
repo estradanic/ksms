@@ -4,16 +4,32 @@
 #include <fstream>
 #include <iostream>
 #include <QTableWidget>
-#include <QMenu>
 
 ContactsWindow::ContactsWindow(QWidget *parent) : QDialog(parent),ui(new Ui::ContactsWindow){
     ui->setupUi(this);
     QWidget::setFixedSize(401, 511);
+
+    contactListModel = new QStandardItemModel(1, 2);
+    ui->ContactsList->setModel(contactListModel);
+
     getContacts();
     showContacts();
+
+    QAction *editAction = new QAction("Edit Contact", this);
+    connect(editAction, SIGNAL(triggered()), this, SLOT(editContact()));
+    QAction *removeAction = new QAction("Remove Contact", this);
+    connect(removeAction, SIGNAL(triggered()), this, SLOT(removeContact()));
+    menu = new QMenu(this);
+    menu->addAction(editAction);
+    menu->addAction(removeAction);
 }
 
 ContactsWindow::~ContactsWindow(){
+    delete menu;
+    names.~QList();
+    numbers.~QList();
+    delete contactListModel;
+    delete ui->ContactsList;
     delete ui;
 }
 
@@ -35,12 +51,11 @@ void ContactsWindow::getContacts(){
     }
     names = contactsMap.keys();
     numbers = contactsMap.values();
+    fileIn.close();
 }
 
 void ContactsWindow::showContacts(){
-    QStandardItemModel* contactListModel = new QStandardItemModel(1, 2);
     ui->ContactsList->connect(ui->ContactsList, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(on_ContactsList_doubleClicked()));
-    ui->ContactsList->setModel(contactListModel);
     for(int index = 0; index < numbers.length(); index++){
         QStandardItem* nameItem = new QStandardItem(names.at(index));
         QStandardItem* numberItem = new QStandardItem("\t"+numbers.at(index));
@@ -109,15 +124,5 @@ void ContactsWindow::on_okayButton_clicked(){
 
 void ContactsWindow::on_ContactsList_customContextMenuRequested(const QPoint &pos){
     Q_UNUSED(pos);
-
-    QAction *editAction = new QAction("Edit Contact", this);
-    connect(editAction, SIGNAL(triggered()), this, SLOT(editContact()));
-
-    QAction *removeAction = new QAction("Remove Contact", this);
-    connect(removeAction, SIGNAL(triggered()), this, SLOT(removeContact()));
-
-    QMenu* menu = new QMenu(this);
-    menu->addAction(editAction);
-    menu->addAction(removeAction);
     menu->exec(QCursor::pos());
 }
