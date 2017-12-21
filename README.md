@@ -6,10 +6,6 @@
 - Qt version 5.9 or higher (Not needed for the AppImage, since it has it bundled)
 
 # Installation
-- Download ksms.AppImage and ksms.desktop
-- Place ksms.desktop in ~/.local/share/applications
-- Place ksms.AppImage in ~/.ksms
-- In terminal:  
-  cd ~/.ksms && sudo chmod +x ksms.AppImage
-- Profit!
+- Just download and run the install script!
+- Or compile from source. You're on your own for that though.
 
