@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=ksms
+Version=0.9
+Exec=~/.ksms/ksms.AppImage
+Comment=a simple sms frontend for kdeconnect
+Icon=~/.ksms/ksms.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Utilities;Utility;Tools;
